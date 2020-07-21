@@ -1,5 +1,12 @@
-body {
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+body {
+   
     background-color: white;
 }
 
@@ -17,21 +24,21 @@ textarea {
     width: 80%;
 }
 
-.main {
+/* .main {
     padding: 10px;
-}
+} */
 
 .search {
-    width: 100%;
+    width: 70%;
     font-size: 15px;
     line-height: 15px;
 }
 
-.sidebar {
+/* .sidebar {
     background-color: #f0f0f0;
     height: 100vh;
     padding: 20px;
-}
+} */
 
 .sidebar h2 {
     margin-top: 5px;
