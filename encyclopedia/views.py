@@ -14,7 +14,7 @@ def index(request):
             return render(request, "encyclopedia/entries.html", {"content":md.convert(html_body)})
         elif matches(data):
             print(f"\n\n{matches(data)}\n\n")
-            return HttpResponse("i will get back to you")
+            return render(request, "encyclopedia/search_list.html", {"search_list": matches(data)})
         else:
             return HttpResponse("Nothing")
 
