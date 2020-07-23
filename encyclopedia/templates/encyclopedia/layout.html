@@ -28,7 +28,11 @@
                     Create New Page
                 </div>
                 <div>
-                    Random Page
+                    <form action="" method="POST">
+                        {% csrf_token %}   
+                   <button type="submit">Random Page
+                </button>                     
+            </form>
                 </div>
                 {% block nav %}
                 {% endblock %}
