@@ -1,0 +1,16 @@
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia-newpage
+{% endblock %}
+
+{% block body %}
+<div class="newentry">
+<form class="newentryform" action="" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input class="btn-primary" type="submit" value="Submit">
+</form>
+</div>
+{% endblock %}

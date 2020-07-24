@@ -35,12 +35,24 @@ textarea {
     width: 70%;
     font-size: 15px;
     line-height: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 0.3px solid black;
+    padding: 2px;
 }
 
 .sidebar {
     background-color: #f0f0f0;
     height: 100vh;
     padding: 20px;
+}
+.sidebar button{
+    outline: none;
+    background: none;
+    border: none;
+}
+.sidebar button i{
+    color:#74b174;
 }
 
 .sidebar h2 {
@@ -55,4 +67,41 @@ li{
     padding: 20px;
     box-shadow: 0.5px 0.5px 10px 1px #888888;
     margin-right: 30px;
+}
+.newentry {
+    margin-top: 100px;
+    margin-right: 20px;
+    border: 0.5px solid black;
+    height: 300px;
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 0.5px 0.5px 10px 1px #888888;
+}
+
+
+.newentryform {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 300px;
+    justify-content: center;
+}
+.newentryform input[type='text']{
+    width: 50%;
+}
+
+
+.newentryform textarea{
+    margin-top: px;
+    margin-bottom: 0px;
+    height: 200px;
+    width: 100%;
+}
+ 
+.newentryform input[type='submit'] {
+    margin: 10px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 10px;
+    padding: 2px;
 }

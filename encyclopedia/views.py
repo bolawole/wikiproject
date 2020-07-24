@@ -4,6 +4,7 @@ from django.urls import reverse
 from . import util
 import markdown
 import random
+from .forms import Newentry
 
 md=markdown.Markdown()
 
@@ -49,9 +50,20 @@ def edit(request,entry):
     return render(request, "encyclopedia/edit.html",{"content": html_body})
 
 def randomentry(request):
-    if request.method=="POST":
-        return HttpResponseRedirect(reverse("entry",kwargs={'entry': random.choice(util.list_entries())}))
+    return HttpResponseRedirect(reverse("entry",kwargs={'entry': random.choice(util.list_entries())}))
 
+
+def newentry(request):
+    forms=Newentry()
+    if request.method=="POST":
+        form = Newentry(request.POST)
+        if form.is_valid():
+            title=form.cleaned_data['title']
+            content=form.cleaned_data['content']
+            util.save_entry(title,content)
+            return HttpResponseRedirect(reverse("entry",kwargs={'entry':title }))
     
+    return render(request,"encyclopedia/new page.html",{"form":forms})
+
 
 

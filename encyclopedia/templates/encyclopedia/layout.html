@@ -16,7 +16,7 @@
                 <h2>Wiki</h2>
                 <form action="{%url 'index'%}" method="POST">
                     {% csrf_token %}
-                    <input class="search" type="text"  name="search_value" placeholder="Search Encyclopedia">
+                    <input class="search" type="text"  name="search_value" placeholder="Search">
                     <button type="submit"><i class="fa fa-search"></i></button>
 
                 </form>
@@ -25,28 +25,32 @@
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                    <form action="{%url 'randomentry'%}" method="POST">
-                        {% csrf_token %}   
-                   <button type="submit"> Create New Page
-                </button>                     
-            </form>
+                                        
+                    <a href="{%url 'newentry'%}">Create Page</a>
                    
                 </div>
                 <div>
-                    <form action="{%url 'randomentry'%}" method="POST">
-                        {% csrf_token %}   
-                   <button type="submit">Random Page
-                </button>                     
-            </form>
-                </div>
+        <a href="{%url 'randomentry'%}">Random Page</a>       
+        </div>
                 {% block nav %}
                 {% endblock %}
             </div>
             <div class="main col-lg-10 col-sm-9 col-xs-8">
                 {% block body %}
                 {% endblock %}
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">1</div>
+                            <div class="col-md-4">2</div>
+                            <div class="col-md-4">3</div>
+                            
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
+   
     </body>
 </html>
