@@ -1,3 +1,6 @@
+:root{
+    --text_color: black
+}
 *{
     margin: 0;
     padding: 0;
@@ -7,12 +10,12 @@
 }
 body {
    
-    background-color: white;
+    background-image: linear-gradient(-90deg, white, #e6ecf3);
 }
 
-code {
+/* /* code {
     white-space: pre;
-}
+} */
 
 h1 {
     margin-top: 0px;
@@ -24,9 +27,9 @@ textarea {
     width: 80%;
 }
 
-/* .main {
+.main {
     padding: 10px;
-} */
+}
 
 .search {
     width: 70%;
@@ -34,12 +37,22 @@ textarea {
     line-height: 15px;
 }
 
-/* .sidebar {
+.sidebar {
     background-color: #f0f0f0;
     height: 100vh;
     padding: 20px;
-} */
+}
 
 .sidebar h2 {
     margin-top: 5px;
+} 
+
+li{
+    list-style-type: none;
+}
+#content_display {
+    border: 1px #ccc2c2 solid;
+    padding: 20px;
+    box-shadow: 0.5px 0.5px 10px 1px #888888;
+    margin-right: 30px;
 }
