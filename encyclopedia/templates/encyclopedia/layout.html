@@ -12,42 +12,84 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+        <nav>
+            <h2><a href="{% url 'index' %}"><i class="fa fa-wordpress" aria-hidden="true"></i></a> </h2>
+            <form action="{%url 'index'%}" method="POST">
+                {% csrf_token %}
+                <input class="search" type="text"  name="search_value" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+
+            </form>
+        </nav>
         <div class="container-fluid">
         <div class="row">
             <div class="sidebar col-lg-2 col-sm-3 col-xs-4">
-                <h2>Wiki</h2>
-                <form action="{%url 'index'%}" method="POST">
-                    {% csrf_token %}
-                    <input class="search" type="text"  name="search_value" placeholder="Search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-
-                </form>
+               
+               
 
                 <div>
-                    <a href="{% url 'index' %}">Home</a>
+
+                    <ul>
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{%url 'newentry'%}">Create Page</a></li>
+                    <li><a href="{%url 'randomentry'%}">Random Page</a></li>
+                    <li> <a href="{% url 'index' %}">About Wiki</a></li>
+                    <li> <a href="{% url 'index' %}">Donate</a></li>
+                    
+                </ul>     
+
                 </div>
-                <div>
-                                        
-                    <a href="{%url 'newentry'%}">Create Page</a>
+                <div class="wiki-nav-categories">
+                     <h6> Contribute</h6> 
+                     <div class="border-line"></div>                  
+                     <ul>
+                    <li><a href="{% url 'index' %}">Help</a></li>
+                    <li><a href="{%url 'newentry'%}">Community Portal</a></li>
+                    <li><a href="{%url 'randomentry'%}">Recent Changes</a></li>
+                    <li> <a href="{% url 'index' %}">Upload file</a></li>
+                    
+                </ul> 
                    
                 </div>
-                <div>
-        <a href="{%url 'randomentry'%}">Random Page</a>       
-        </div>
-                {% block nav %}
-                {% endblock %}
+                <div class="wiki-nav-categories">
+             <h6>Tools</h6>
+             <div class="border-line"></div>
+             <ul>
+                    <li><a href="{% url 'index' %}">What links here</a></li>
+                    <li><a href="{%url 'newentry'%}">Related Changes</a></li>
+                    <li><a href="{%url 'randomentry'%}">Special Pages</a></li>
+                    <li> <a href="{% url 'index' %}">Permanent link</a></li>
+                    <li> <a href="{% url 'index' %}">Page information</a></li>
+                    <li> <a href="{% url 'index' %}">Wikidata item</a></li>
+                </ul>   
             </div>
-            <div class="main col-lg-10 col-sm-9 col-xs-8">
-                {% block body %}
-                {% endblock %}
-              
+         
+            <div class="wiki-nav-categories"> 
+                <div class="border-line"></div>
+                <ul>
+                <h6>Print/export</h6>
+                <div class="border-line"></div>
+                <li><a href="">Donwload as PDF</a> </li>
+                <li><a href=""> Printable version</a></li>
+            </ul>
             </div>
+         </div>
+         <div class="main col-lg-10 col-sm-9 col-xs-8">
+            {% block body %}
+            {% endblock %}
+          
         </div>
-    </div>
+            
+         
+        </div>
+    
     <footer>
         <div class="container" id="foooter-wrapper">
+            <div class="border-line-footer"></div>   
             <div class="row footer-section">
                 <div class="col-md-4 social-link">
+                    <h2 style="text-align: center;"><a href="{% url 'index' %}"><i class="fa fa-wordpress" aria-hidden="true"></i></a> </h2>
+
                     
                     <ul>
                         <li><i class="fa fa-google" aria-hidden="true" style="color:red ;"></i>
