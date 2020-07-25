@@ -6,7 +6,9 @@
     <head>
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="shortcut icon" href="#">
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'encyclopedia/index.js' %}"></script>   
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -38,40 +40,48 @@
             <div class="main col-lg-10 col-sm-9 col-xs-8">
                 {% block body %}
                 {% endblock %}
-                <footer>
-                    <div class="container">
-                        <div class="row footer-section">
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4">
-                                <h6>Policies</h6>
-                                <ul>
-                                    <li><a href="">Privacy Policies</a> </li>
-                                    <li><a href="">cookie Policies</a> </li>
-                                    <li><a href="">Editorial Policies</a> </li>
-                                    <li><a href="">Advertising Policies</a> </li>
-                                    <li><a href="">Correction Policies</a> </li>
-                                    <li><a href="">Term of Use</a> </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4">
-                                <h6>About</h6>
-                                <li><a href="">Contact Us</a> </li>
-                                <li><a href="">About</a> </li>
-                                <li><a href="">Careers</a> </li>
-                                <li><a href="">Newsletter</a> </li>
-                                <li><a href="">corporate</a> </li>
-                                <li><a href="">Accessibity</a> </li>
-
-
-
-                            </div>
-                            
-                        </div>
-                    </div>
-                </footer>
+              
             </div>
         </div>
     </div>
-   
+    <footer>
+        <div class="container" id="foooter-wrapper">
+            <div class="row footer-section">
+                <div class="col-md-4 social-link">
+                    
+                    <ul>
+                        <li><i class="fa fa-google" aria-hidden="true" style="color:red ;"></i>
+                        </li>
+                        <li><i class="fa fa-facebook-square" style="color: #6666a2;"></i></li>
+                        <li><i class="fa fa-linkedin-square" style="color:cadetblue;"></i></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>Policies</h6>
+                    <ul>
+                        <li><a href="">Privacy Policies</a> </li>
+                        <li><a href="">cookie Policies</a> </li>
+                        <li><a href="">Editorial Policies</a> </li>
+                        <li><a href="">Advertising Policies</a> </li>
+                        <li><a href="">Correction Policies</a> </li>
+                        <li><a href="">Term of Use</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h6>About</h6>
+                    <li><a href="">Contact Us</a> </li>
+                    <li><a href="">About</a> </li>
+                    <li><a href="">Careers</a> </li>
+                    <li><a href="">Newsletter</a> </li>
+                    <li><a href="">corporate</a> </li>
+                    <li><a href="">Accessibity</a> </li>
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </footer>
     </body>
 </html>

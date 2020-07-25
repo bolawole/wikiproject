@@ -29,6 +29,7 @@ textarea {
 
 .main {
     padding: 10px;
+    font-size: 10px;
 }
 
 .search {
@@ -42,7 +43,6 @@ textarea {
 }
 
 .sidebar {
-    background-color: #f0f0f0;
     padding: 20px;
 }
 .sidebar button{
@@ -106,7 +106,7 @@ li{
 }
 footer{
         font-size: 9px;
-        border-top: 0.1px solid rgba(0,0,0,0.5);
+     
         padding: 10px;
 
 }
@@ -114,4 +114,28 @@ footer{
     height: 100vh;
     font-size: 10px;
     margin-top: 100px;
+}
+.container-fluid{
+   min-height: 100vh;
+}
+.entry_display h1,h2{
+    font-size: 30px;
+}
+
+.entry_display p{
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
+}
+.social-link ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    font-size: 2em;
+}
+.footer-section{
+    margin-top: 2em;
+}
+#foooter-wrapper{
+    border-top: 0.1px solid rgba(0,0,0,0.5);
 }
