@@ -43,7 +43,6 @@ textarea {
 
 .sidebar {
     background-color: #f0f0f0;
-    height: 100vh;
     padding: 20px;
 }
 .sidebar button{
@@ -104,4 +103,15 @@ li{
     border-radius: 10px;
     font-size: 10px;
     padding: 2px;
+}
+footer{
+        font-size: 9px;
+        border-top: 0.1px solid rgba(0,0,0,0.5);
+        padding: 10px;
+
+}
+.content_display {
+    height: 100vh;
+    font-size: 10px;
+    margin-top: 100px;
 }
