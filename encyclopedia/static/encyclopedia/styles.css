@@ -5,8 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-
 }
 body {
    
@@ -17,16 +15,20 @@ body {
     white-space: pre;
 } */
 
-h1 {
-    margin-top: 0px;
-    padding-top: 20px;
+h1{
+margin-top: 0px;
+/* padding-top: 20px; */
+font-size: 20px;
+color: rgba(67,66,66,0.5);
 }
-
 textarea {
     height: 90vh;
     width: 80%;
 }
-
+p{
+    padding: 0;
+    margin: 0;
+}
 .main {
     padding: 10px;
     font-size: 10px;
@@ -58,6 +60,9 @@ nav button{
 }
 nav h2 i{
     color: #b16666;
+}
+nav h2{
+    font-size: 2em;
 }
 nav {
     display: flex;
@@ -94,15 +99,15 @@ li{
     margin-right: 30px;
 }
 .newentry {
-    margin-top: 100px;
-    margin-right: 20px;
+    margin-top: 30px;
+    margin-right: 50px;
     border: 0.5px solid black;
     height: 300px;
     margin-left: 20px;
     background-color: white;
+    border-radius: 10px;
     box-shadow: 0.5px 0.5px 10px 1px #888888;
 }
-
 
 .newentryform {
     display: flex;
@@ -139,18 +144,18 @@ footer{
 .content_display {
     height: 100vh;
     font-size: 10px;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 .container-fluid{
    min-height: 100vh;
 }
 .entry_display h1,h2{
-    font-size: 30px;
+    font-size: 2em;
+    color: rgba(67,66,66,0.5);
 }
 
-.entry_display p{
-    margin-top: 2.5rem;
-    font-size: 0.8rem;
+h2{
+    font-size: 1em;
 }
 .social-link ul{
     display: flex;
@@ -182,4 +187,40 @@ footer{
 }
 .wiki-nav-categories{
     position: relative;
+}
+
+footer h6{
+    font-size: 1em;
+    color: rgba(67,66,66,0.5);
+}
+.fa-google{
+    color: red;
+    transition: ease 0.3s;
+}
+.fa-google:hover{
+    color: white;
+    background-color: rgba(240, 20, 20, 0.7);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.fa-facebook-square{
+    color: #6666a2;
+    transition: ease 0.3s;
+}
+.fa-facebook-square:hover{
+    color: white;
+    background-color: #6666a2;
+    border-radius: 5px;
+    padding: 5px;
+}
+.fa-linkedin-square{
+    color:cadetblue;
+    transition: ease 0.3s;   
+}
+.fa-linkedin-square:hover{
+    color: white;
+    background-color: cadetblue;
+    border-radius: 5px;
+    padding: 5px;
 }

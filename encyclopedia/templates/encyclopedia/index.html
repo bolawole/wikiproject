@@ -9,7 +9,7 @@
 <div class="content_display">
     <ul>
         {% for entry in entries %}
-            <li><a href="{% url 'entry' entry%}">{{ entry }}</a></li>
+            <li><a href="{% url 'entry' entry%}">{{ entry|title }}</a></li>
         {% endfor %}
     </ul>
 </div>

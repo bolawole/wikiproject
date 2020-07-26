@@ -45,7 +45,7 @@ def edit(request,entry):
         data=request.POST.get('wikipedia_edit')
         util.save_entry(entry,data)
         html_body=util.get_entry(entry)
-        return render(request, "encyclopedia/entries.html", {"content":md.convert(html_body), "content_title":entry})
+        return HttpResponseRedirect(reverse("entry",kwargs={'entry':entry }))
 
     return render(request, "encyclopedia/edit.html",{"content": html_body})
 
